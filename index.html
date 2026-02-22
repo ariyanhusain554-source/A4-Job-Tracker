@@ -32,15 +32,15 @@
          <div class=" grid grid-cols-3 gap-10 my-7">
              <div class="bg-[#FFFFFF] px-3 py-5 rounded">
                 <p>Total</p>
-                <P>0</P>
+                <P id="totalCount">0</P>
              </div>
              <div class="bg-[#FFFFFF] px-3 py-5 rounded">
                 <p>Interview</p>
-                <P class="text-green-400">0</P>
+                <P  class="text-green-400" id="interviewCount">0</P>
              </div>
              <div class="bg-[#FFFFFF] px-3 py-5 rounded ">
                 <p>Rejected</p>
-                <P class="text-red-500">0</P>
+                <P  class="text-red-500" id="rejectedCount">0</P>
              </div>
          </div>
 
@@ -52,19 +52,19 @@
     <!-- title & toggle buttons  -->
         <div class="flex justify-between ">
             <p class="text-xl font-bold">Available Jobs</p>
-            <p><span>0</span> jobs</p>
+            <p><span id="availableJobCount">0</span> jobs</p>
 
         </div>
         <div class="flex gap-8 my-5">
-            <button class="bg-[#FFFFFF] px-3 py-3 rounded">All</button>  
-            <button class="bg-[#FFFFFF] px-3 py-3 rounded">Interview</button>
-            <button class="bg-[#FFFFFF] px-3 py-3  rounded">Rejected</button>
+            <button onclick="toggleStyle(allBtn)" id="allBtn" class="bg-[#FFFFFF] px-3 py-3 rounded">All</button>  
+            <button onclick="toggleStyle(interviewBtn)" id="interviewBtn" class="bg-[#FFFFFF] px-3 py-3 rounded">Interview</button>
+            <button onclick="toggleStyle(rejectedBtn)" id="rejectedBtn" class="bg-[#FFFFFF] px-3 py-3  rounded">Rejected</button>
         </div>
 
 
     <!-- No jobs available  -->
 
-     <section class=""> 
+     <section id="noJobsSection"  class=""> 
         <div class="bg-[#FFFFFF] py-30 rounded " >
             <img src="jobs.png" alt="" class="relative left-1/2 -translate-x-1/2">
             <br>
@@ -78,7 +78,7 @@
 
     <!-- cards -->
         
-    <section class="hidden">
+    <section id="allCards" class="hidden">
           <!-- card-1 -->
     <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
            <div>
