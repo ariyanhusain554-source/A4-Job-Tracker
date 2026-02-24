@@ -76,7 +76,7 @@ function toggleStyle(id) {
             }
             availableJobCount.innerText = allCards.children.length;
 
-            
+
            
         }
 
@@ -96,10 +96,10 @@ mainContent.addEventListener("click", function(event) {
         const location = parentNode.querySelector(".location").innerText;
         const type = parentNode.querySelector(".type").innerText;
         const salary = parentNode.querySelector(".salary").innerText;
-        const status = parentNode.querySelector(".status p").innerText;
+        const status = parentNode.querySelector(".status").innerText;
         const description = parentNode.querySelector(".description").innerText;
 
-        parentNode.querySelector(".status p").innerText = "Interviewed";
+        parentNode.querySelector(".status").innerText = 'Interviewed';
 
         const cardInfo = ({
             companyName,
@@ -107,7 +107,7 @@ mainContent.addEventListener("click", function(event) {
             location,
             type,
             salary,
-            status: "Interviewed",
+            status: 'Interviewed',
             description
         });
 
@@ -142,10 +142,11 @@ mainContent.addEventListener("click", function(event) {
         const location = parentNode.querySelector(".location").innerText;
         const type = parentNode.querySelector(".type").innerText;
         const salary = parentNode.querySelector(".salary").innerText;
-        const status = parentNode.querySelector(".status p").innerText;
+        const status = parentNode.querySelector(".status").innerText;
         const description = parentNode.querySelector(".description").innerText;
 
-        parentNode.querySelector(".status p").innerText = "Rejected";
+
+        parentNode.querySelector(".status").innerText = 'Rejected';
 
         const cardInfo = ({
             companyName,
@@ -153,7 +154,7 @@ mainContent.addEventListener("click", function(event) {
             location,
             type,
             salary,
-            status: "Rejected",
+            status: 'Rejected',
             description
         });
 
@@ -206,16 +207,16 @@ function renderInterviewList() {
                  </div>
                 
             </div>
-            <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
-                <p>${job.status}</p>
-            </div>
+           
+            <p class="status bg-gray-300 px-3 py-1 rounded w-max my-3">${job.status}</p>
+          
             <p class="description">${job.description}</p>
             <div class="flex gap-3 my-5">
                 <button id="interviewBtn" class="text-green-500 border border-green-500 px-2 py-1 rounded">INTERVIEW</button>
                 <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
             </div>
           </div>
-          <span class="deleteBtn cursor-pointer"><i class="fa-regular fa-trash-can"></i></span>
+          <i class="deleteBtn cursor-pointer fa-regular fa-trash-can"></i>
                      
               
         `
@@ -242,16 +243,16 @@ function renderRejectedList() {
                  </div>
                 
             </div>
-            <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
-                <p>${job.status}</p>
-            </div>
+            
+            <p class="status bg-gray-300 px-3 py-1 rounded w-max my-3">${job.status}</p>
+            
             <p class="description">${job.description}</p>
             <div class="flex gap-3 my-5">
                 <button id="interviewBtn" class="text-green-500 border border-green-500 px-2 py-1 rounded">INTERVIEW</button>
                 <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
             </div>
           </div>
-          <span class="deleteBtn cursor-pointer"><i class="fa-regular fa-trash-can"></i></span>
+          <i class="deleteBtn cursor-pointer fa-regular fa-trash-can"></i>
         `
         filterSection.appendChild(div);     
     }   
@@ -264,8 +265,8 @@ document.addEventListener("click", function(e) {
     const target = e.target;
     if (target.classList.contains("deleteBtn")) {
        const card = target.closest(".jobCard")
-        card.remove();
-
+       card.remove();
     }
+
     calculateCounts();
 });
