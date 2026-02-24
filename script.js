@@ -52,31 +52,35 @@ function toggleStyle(id) {
             allCards.classList.add("hidden");
              noJobsSection.classList.add("hidden");
              filterSection.classList.remove("hidden");
-             renderInterviewList();
-             availableJobCount.innerText = interviewList.length;
+             
                 if (interviewList.length === 0) {   
                 noJobsSection.classList.remove("hidden");
                 }
+
+            renderInterviewList();
+            availableJobCount.innerText = `${interviewList.length} of ${allCards.children.length}`;
+
         } else if (id === rejectedFilterBtn) {
             allCards.classList.add("hidden");
             noJobsSection.classList.add("hidden");
             filterSection.classList.remove("hidden");
-            renderRejectedList();
-            availableJobCount.innerText = rejectedList.length;
+          
             if (rejectedList.length === 0) {
                 noJobsSection.classList.remove("hidden");
             }
+
+            renderRejectedList();
+            availableJobCount.innerText = `${rejectedList.length} of ${allCards.children.length}`;
+
         } else if (id === allFilterBtn) {
             currentFilter = id;
             noJobsSection.classList.add("hidden");
             filterSection.classList.add("hidden");
-            allCards.classList.remove("hidden");
             if (allCards.children.length === 0) {
                 noJobsSection.classList.remove("hidden");
             }
+            allCards.classList.remove("hidden");
             availableJobCount.innerText = allCards.children.length;
-
-
            
         }
 
@@ -116,7 +120,6 @@ mainContent.addEventListener("click", function(event) {
          const jobExists = interviewList.find(job => job.companyName === cardInfo.companyName && job.position === cardInfo.position);
          if (!jobExists) {
              interviewList.push(cardInfo);
-            
          }
 
         
@@ -163,9 +166,11 @@ mainContent.addEventListener("click", function(event) {
         if (!jobExists) {
             rejectedList.push(cardInfo);
         }
+
+       
         
       
-         // Update UI
+        // Update UI
         //  event.target.innerText = "Rejected";
         //  event.target.classList.remove("text-red-500", "border-red-500");
         //  event.target.classList.add("text-gray-500", "border-gray-500");
