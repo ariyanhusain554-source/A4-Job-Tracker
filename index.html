@@ -29,7 +29,7 @@
     <header class="w-[80%] mx-auto"> 
 
         <h1 class="text-4xl font-bold">Job Application Tracker</h1>
-         <div class=" grid grid-cols-3 gap-10 my-7">
+         <div class=" grid grid-cols-1 md:grid-cols-3 gap-10 my-7">
              <div class="bg-[#FFFFFF] px-3 py-5 rounded">
                 <p>Total</p>
                 <P id="totalCount">0</P>
@@ -77,21 +77,18 @@
 
      <!-- Filter section -->
 
-    <section id="filterSection">
+    <section id="filterSection" class="hidden">
 
 
 
     </section>
 
 
-
-
-
     <!-- cards -->
         
     <section id="allCards" class="hidden">
           <!-- card-1 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
            <div>
               <p class="companyName text-xl font-bold">Mobile First Corps</p>
             <div class="text-gray-400">
@@ -106,7 +103,7 @@
                  </div>
                 <!-- <p class="">Remote • Full-time • $130,000 - $175,000</p> -->
             </div>
-            <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+            <div id="" class= "status bg-gray-300 px-3 py-1 rounded w-max my-3">
                 <p>Not Applied</p>
             </div>
             <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
@@ -115,12 +112,12 @@
                 <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
             </div>
           </div>
-          <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+          <span class="deleteBtn cursor-pointer" ><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
         
         <!-- card-2 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold" >WebFlow Agency</p>
        <div class="text-gray-400">
@@ -135,7 +132,7 @@
              </div>
            <!-- <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
@@ -144,12 +141,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer"><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-3 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">DataViz Solutions</p>
        <div class="text-gray-400">
@@ -164,7 +161,7 @@
              </div>
            <!-- <p>Boston, MA • Full-time • $125,000 - $165,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
@@ -173,12 +170,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer" ><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-4 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">CloudFirst Inc</p>
        <div class="text-gray-400">
@@ -193,7 +190,7 @@
              </div>
            <!-- <p>Seattle, WA • Full-time • $140,000 - $190,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
@@ -202,12 +199,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer"><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-5 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">Innovation Labs</p>
        <div class="text-gray-400">
@@ -222,7 +219,7 @@
              </div>
            <!-- <p>Austin, TX • Full-time • $110,000 - $150,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
@@ -231,12 +228,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class=" deleteBtn cursor-pointer"><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-6 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">MegaCorp Solutions</p>
        <div class="text-gray-400">
@@ -251,7 +248,7 @@
              </div>
            <!-- <p>New York, NY • Full-time • $130,000 - $170,00</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
@@ -260,12 +257,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(delete)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer"  ><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-7 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">StartupXYZ</p>
        <div class="text-gray-400">
@@ -280,7 +277,7 @@
              </div>
            <!-- <p>Remote • Full-time • $120,000 - $160,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
@@ -289,12 +286,12 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(this)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer" ><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
 
         <!-- card-8 -->
-    <div class=" flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
+    <div class="jobCard flex justify-between bg-[#FFFFFF] px-5 py-5 rounded my-5" >
       <div>
          <p class="companyName text-xl font-bold">TechCorp Industries</p>
        <div class="text-gray-400">
@@ -309,7 +306,7 @@
              </div>
            <!-- <p>San Francisco, CA • Full-time • $130,000 - $175,000</p> -->
        </div>
-       <div id="status" class="bg-gray-300 px-3 py-1 rounded w-max my-3">
+       <div id="" class="status bg-gray-300 px-3 py-1 rounded w-max my-3">
            <p>Not Applied</p>
        </div>
        <p class="description">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
@@ -318,7 +315,7 @@
            <button id="rejectedBtn" class="text-red-500 border border-red-500 px-2 py-1 rounded">REJECTED</button>
        </div>
      </div>
-     <span class="cursor-pointer" onclick="deleteCard(this)" id="delete"><i class="fa-regular fa-trash-can"></i></span>
+     <span class="deleteBtn cursor-pointer" ><i class="fa-regular fa-trash-can"></i></span>
 
     </div>
        
